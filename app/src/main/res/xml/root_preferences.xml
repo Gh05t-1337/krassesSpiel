@@ -1,0 +1,179 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <PreferenceCategory app:title="@string/messages_header">
+        <!--
+        <EditTextPreference
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />-->
+
+        <ListPreference
+            app:defaultValue="0"
+            app:entries="@array/mus_entries"
+            app:entryValues="@array/mus"
+            app:key="music"
+            app:title="Music"
+            app:useSimpleSummaryProvider="true" />
+
+        <Preference
+            app:key="uri"
+            app:isPreferenceVisible="false"
+            />
+
+        <SwitchPreferenceCompat
+            app:title="Pew Pew Sound"
+            app:key="pewpew"
+            app:defaultValue="false"
+            />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory app:title="@string/sync_header">
+        <ListPreference
+            app:defaultValue="6"
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:key="ges"
+            app:title="@string/reply_title"
+            app:useSimpleSummaryProvider="true" />
+
+        <SwitchPreferenceCompat
+            app:key="vert"
+            app:defaultValue="true"
+            app:title="@string/sync_title" />
+
+        <SwitchPreferenceCompat
+            app:dependency="vert"
+            app:defaultValue="true"
+            app:key="bug"
+            app:title="@string/bug" />
+
+        <SwitchPreferenceCompat
+            app:key="teleport"
+            app:defaultValue="true"
+            app:title="Teleport Feature" />
+
+        <!--<ListPreferenceCombat
+            app:defaultValue="6"
+            app:key="ges"
+            app:entries="@array/reply_entries"
+            app:entryValues="@array/reply_values"
+            app:title="@string/ges" />-->
+
+        <!--<SwitchPreferenceCompat
+            app:dependency="sync"
+            app:key="attachment"
+            app:summaryOff="@string/attachment_summary_off"
+            app:summaryOn="@string/attachment_summary_on"
+            app:title="@string/attachment_title" />-->
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Player Colors">
+        <Preference app:title="Spaceship Color"
+            app:key="scolor"
+            app:defaultValue="#ffffff"
+            app:icon="@drawable/color_icon9"/>
+        <Preference app:title="Own Bullets Color"
+            app:key="bcolor"
+            app:defaultValue="#ffffff"
+            app:icon="@drawable/color_icon8"/>
+        <Preference app:title="Explosion Color"
+            app:key="excolor"
+            app:defaultValue="#ffffff"
+            app:icon="@drawable/color_icon7"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Enemie Colors">
+        <Preference app:title="Squares Color"
+            app:key="qcolor"
+            app:defaultValue="#000000"
+            app:icon="@drawable/color_icon6"/>
+        <Preference app:title="Bad Bullets Main Color"
+            app:key="bbcolor"
+            app:defaultValue="#000000"
+            app:icon="@drawable/color_icon5"/>
+        <Preference app:title="Bad Bullets Outside Color"
+            app:key="bbocolor"
+            app:defaultValue="#ffffff"
+            app:icon="@drawable/color_icon4"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Background and UI Color">
+        <Preference app:title="Points Color"
+            app:key="uicolor"
+            app:defaultValue="#ffffff"
+            app:icon="@drawable/color_icon3"/>
+
+        <!--<SwitchPreferenceCompat app:title="Single Color Background"
+            app:key="singlecolor"
+            app:defaultValue="false"/>
+
+        <Preference app:title="Pick Color"
+            app:key="color"
+            app:defaultValue="#a0a0a0"
+            app:icon="@drawable/color_icon2"
+            app:dependency="singlecolor"/>-->
+
+        <SwitchPreferenceCompat app:title="Single Gradient Color Background"
+            app:key="singlegradcolor"
+            app:defaultValue="false"/>
+        <ListPreference
+            app:defaultValue="2"
+            app:entries="@array/colorCount"
+            app:entryValues="@array/colorCount"
+            app:key="color_count"
+            app:title="Number of Colors"
+            app:useSimpleSummaryProvider="true"
+            app:dependency="singlegradcolor"/>
+        <Preference app:title="1. Color"
+            app:key="color1"
+            app:defaultValue="#a0a0a0"
+            app:icon="@drawable/color_icon1"
+            app:dependency="singlegradcolor"/>
+        <Preference app:title="2. Color"
+            app:key="color2"
+            app:defaultValue="#a0a0a0"
+            app:icon="@drawable/color_icon"
+            app:dependency="singlegradcolor"/>
+        <Preference app:title="3. Color"
+            app:key="color3"
+            app:defaultValue="#a0a0a0"
+            app:icon="@drawable/color3_icon"
+            app:dependency="singlegradcolor"/>
+        <Preference app:title="4. Color"
+            app:key="color4"
+            app:defaultValue="#a0a0a0"
+            app:icon="@drawable/color4_icon"
+            app:dependency="singlegradcolor"/>
+        <Preference app:title="5. Color"
+            app:key="color5"
+            app:defaultValue="#a0a0a0"
+            app:icon="@drawable/color5_icon"
+            app:dependency="singlegradcolor"/>
+        <!--<Preference
+            app:key="resetBD"
+            app:title="dings"
+            app:summary="nothing"
+            app:widgetLayout="@layout/pref_reset_bd_button"
+            ></Preference>-->
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="complicated Numbers">
+        <EditTextPreference app:title="Bad Bullets Color Gradient Radius"
+            app:key="color_radius"
+            app:defaultValue="16"
+            app:dialogLayout="@layout/preference_edit_text"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Reset">
+        <Preference app:title="Reset to Default Preferences"
+            app:key="default"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>
