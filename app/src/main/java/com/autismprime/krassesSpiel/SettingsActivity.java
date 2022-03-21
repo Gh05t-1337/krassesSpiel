@@ -84,7 +84,7 @@ public class SettingsActivity extends AppCompatActivity {
                     System.out.println("Selected: " + value);
                     if(value.equals("-1")) {
                         //PERMISSION>>
-                        /*if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) { // Level 23
+                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) { // Level 23
 
                             // Check if we have Call permission
                             int permisson = ActivityCompat.checkSelfPermission(getContext(),
@@ -98,7 +98,7 @@ public class SettingsActivity extends AppCompatActivity {
                                 );
 
                             }
-                        }*///doesnt seem to be needed
+                        }
                         //<<
                         Intent intent;
                         intent = new Intent();
