@@ -30,6 +30,5 @@ lists are nice:
   * Dignissim convallis aenean et tortor at risus viverra adipiscing at
 
 ending of list
-  *
 
 [f-droid]: https://f-droid.org/de/packages/com.autismprime.krassesSpiel/
