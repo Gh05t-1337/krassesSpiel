@@ -1,6 +1,6 @@
 # krassesSpiel
 
-[<img src="https://f-droid.org/badge/get-it-on.png" alt="Get it on F-Droid" height="80">][f-droid]
+[<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">][f-droid]
 
 _A little Game where you shoot bullets at squares_
 
