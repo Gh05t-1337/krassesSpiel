@@ -21,6 +21,15 @@ Eget nulla facilisi etiam dignissim diam quis. Amet volutpat consequat mauris nu
   <img src="https://github.com/Gh05t-1337/krassesSpiel/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/photo_2022-03-19_23-10-03.jpg" width="200" /> 
 </p>
 
+# End
+A big heading and some ending text also makes it look nicer, so here you go.
+lists are nice:
+  * Egestas quis ipsum
+  * Nunc sed augue lacus viverra vitae congue eu
+  * Non scholae sed vitae discimus
+  * Dignissim convallis aenean et tortor at risus viverra adipiscing at
 
+ending of list
+  *
 
 [f-droid]: https://f-droid.org/de/packages/com.autismprime.krassesSpiel/
