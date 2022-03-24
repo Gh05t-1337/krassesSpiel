@@ -4,7 +4,7 @@
 
 _A little Game where you shoot bullets at squares_
 
-![screenshot](https://github.com/Gh05t-1337/krassesSpiel/blob/master/fastlane/metadata/android/en-US/images/featureGraphicNeu.png)
+![screenshot](https://github.com/Gh05t-1337/krassesSpiel/blob/master/fastlane/metadata/android/en-US/images/featureGraphic.png)
 
 
 <p float="left">
