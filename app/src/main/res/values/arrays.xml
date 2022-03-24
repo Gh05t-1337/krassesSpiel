@@ -1,7 +1,8 @@
 <resources>
     <string-array name="reply_entries">
+        <item>slow</item>
         <item>normal</item>
-        <item>schnellll!</item>
+        <item>fast</item>
     </string-array>
 
     <string-array name="mus_entries">
@@ -12,6 +13,7 @@
     <string-array name="reply_values">
         <item>6</item>
         <item>9</item>
+        <item>12</item>
     </string-array>
     <string-array name="mus">
         <item>0</item>

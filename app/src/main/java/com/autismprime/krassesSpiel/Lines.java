@@ -38,6 +38,7 @@ public class Lines extends SurfaceView implements View.OnTouchListener/*,View.On
     SensorManager man;//
     int hoch;
     int weit;
+    int dichte;
 SurfaceHolder hold;
     MThread mn=new MThread(this);
     ArrayList<float[]> bullets = new ArrayList<>();
@@ -50,7 +51,7 @@ SurfaceHolder hold;
    // float rotPos=100;
     float blauPos=100;
     float blauPosY;//NEU für Vertikal
-    float blauGes=6;//für phiechen 9
+    float blauGes=9;//für phiechen 9
     int points=0;
     boolean dead=false;
     int deadRadius=0;
@@ -129,6 +130,7 @@ SurfaceHolder hold;
        ((Activity) con).getWindowManager().getDefaultDisplay().getMetrics(mets);
        hoch=mets.heightPixels;
        weit=mets.widthPixels;
+       dichte = (int)(mets.density * 160f);
         //ballX=weit/2;
        // ballY=hoch/2;
         moschän=moschn;
@@ -339,10 +341,10 @@ SurfaceHolder hold;
                     if (e.getX() < lastPointerPos - 10f) mn.st = -blauGes;
                 }
                 else{
-                    float dy=e.getY()-lastPointerPosY;//NEU für Vertikal
-                    float dx=e.getX()-lastPointerPos;//NEU für Vertikal
-                    mn.st = blauGes*dx/10;
-                    mn.sty = blauGes*dy/10;
+                    float dy=(e.getY()-lastPointerPosY)/dichte;//NEU für Vertikal
+                    float dx=(e.getX()-lastPointerPos)/dichte;//NEU für Vertikal
+                    mn.st = blauGes*dx*26;
+                    mn.sty = blauGes*dy*26;
                    // Log.i("", String.valueOf(mn.sty)+","+String.valueOf(mn.st));
                 }
             }

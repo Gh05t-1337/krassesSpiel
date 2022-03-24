@@ -1,3 +1,3 @@
-A little Game where you shoot bullets at squares and try to not get hit by enemie bullets. can be played using touch or motion control.
+A little Game where you shoot bullets at squares and try not to get hit by enemie bullets. can be played using touch or motion control.
 if you don't like the look of the game, you can change all colors in settings. if you don't like, that there is no background music, you can choose background music in settings.
 if you like cool laser sounds, enable them in settings. if you like bugs, there is a bug you can enable in settings.

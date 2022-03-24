@@ -1,0 +1,3 @@
+*changed icon
+*increased compatibility with different screen sizes
+*added "slow" setting to speed
