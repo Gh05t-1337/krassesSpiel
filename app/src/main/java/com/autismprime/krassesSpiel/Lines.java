@@ -1,5 +1,5 @@
 package com.autismprime.krassesSpiel;
-  
+
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ArgbEvaluator;
