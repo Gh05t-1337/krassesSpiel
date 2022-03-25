@@ -1,5 +1,5 @@
 package com.autismprime.krassesSpiel;
-
+  
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ArgbEvaluator;
@@ -34,6 +34,7 @@ import java.util.Random;
 public class Lines extends SurfaceView implements View.OnTouchListener/*,View.OnClickListener*/, SensorEventListener {
     Paint pain=new Paint();
     DisplayMetrics mets=new DisplayMetrics();
+    
     Sensor sen;//
     SensorManager man;//
     int hoch;
