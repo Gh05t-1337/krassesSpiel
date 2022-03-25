@@ -1,0 +1,1 @@
+  *changes in last release made compatibility with different resolutions worse, so that got reversed
