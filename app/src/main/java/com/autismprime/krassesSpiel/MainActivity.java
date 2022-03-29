@@ -42,7 +42,7 @@ Lines lins;int a=0;MediaPlayer mp;
                 setContentView(lins);
             }
         });
-
+        //Why do most programmers use dark mode? Because the light attracts too many bugs.
         Button button2 = (Button) findViewById(R.id.button3);
         button2.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -102,7 +102,7 @@ Lines lins;int a=0;MediaPlayer mp;
 
                 break;
         }
-
+//What code does a depressed programmer write? "Goodbye world!"
         if(sp!=null) {
             lins=new Lines(this,false);
 
@@ -167,7 +167,7 @@ Lines lins;int a=0;MediaPlayer mp;
         }
 
     }
-
+//My programmer friend said I have a high IQ. He said it's 404
     @Override
     public void onBackPressed() {
         if(mp!=null) {
