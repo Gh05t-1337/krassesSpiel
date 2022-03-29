@@ -15,7 +15,6 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.core.app.NavUtils;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
@@ -45,6 +44,27 @@ public class SettingsActivity extends AppCompatActivity {
 
     public static class SettingsFragment extends PreferenceFragmentCompat {
         public static Uri ur;
+        //open file picker if permission granted
+        ActivityResultLauncher<String> mPermissionResult = registerForActivityResult(
+                new ActivityResultContracts.RequestPermission(),
+                new ActivityResultCallback<Boolean>() {
+                    @Override
+                    public void onActivityResult(Boolean result) {
+                        if(result) {
+                            Log.wtf("", "onActivityResult: PERMISSION GRANTED");
+                        } else {
+                            Log.wtf("", "onActivityResult: PERMISSION DENIED");
+                        }
+                        Intent intent;
+                        intent = new Intent();
+                        intent.setAction(Intent.ACTION_GET_CONTENT);
+                        intent.setType("audio/*");
+
+                        launcher.launch(Intent.createChooser(intent, ""));
+                    }
+                });
+
+        //check what music the user chose
         ActivityResultLauncher<Intent> launcher=registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
                     @Override
@@ -63,8 +83,8 @@ public class SettingsActivity extends AppCompatActivity {
                             PreferenceManager.getDefaultSharedPreferences(getContext()).edit().putString("uri", uriString).commit();
                         }
                     }
-                }
-                );
+                });
+
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
@@ -77,21 +97,8 @@ public class SettingsActivity extends AppCompatActivity {
                 public boolean onPreferenceChange(Preference preference, Object value) {
                     System.out.println("Selected: " + value);
                     if(value.equals("-1")) {
-                        //PERMISSION>>
-                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M) { // Level 23, Android 6.0 M
-                                // If don't have permission prompt the user.
-                                ActivityCompat.requestPermissions(getActivity(),
-                                        new String[]{Manifest.permission.READ_EXTERNAL_STORAGE},
-                                        1000
-                                );
-                        }
-                        //<<
-                        Intent intent;
-                        intent = new Intent();
-                        intent.setAction(Intent.ACTION_GET_CONTENT);
-                        intent.setType("audio/*");
-
-                        launcher.launch(Intent.createChooser(intent, ""));
+                        //ask for permission request and open file picker
+                            mPermissionResult.launch(Manifest.permission.READ_EXTERNAL_STORAGE);
                     }
                     return true;
                 }
