@@ -23,7 +23,7 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.Random;
 
-
+//As a programmer, I would make a UDP joke. But you might not get it.
 public class Lines extends SurfaceView implements View.OnTouchListener, SensorEventListener {
     Paint pain=new Paint();
     DisplayMetrics mets=new DisplayMetrics();
@@ -80,7 +80,7 @@ public class Lines extends SurfaceView implements View.OnTouchListener, SensorEv
             {"#ffb800","#c33ee0"}};
     GradientDrawable gd;
 
-
+//Why do programmers think Halloween and Christmas are the same? Because 31 OCT = 25 DEC.
     public Lines(Context con,boolean moschn){
         super(con);
         view=this;
@@ -177,7 +177,7 @@ public class Lines extends SurfaceView implements View.OnTouchListener, SensorEv
     @Override
     public void onDraw(Canvas can){
         pain.setColor(bulletsColor);
-
+//Why do programmers never go to sleep? Because goto is evil.
         //draw Bullets and check if Enemie is hit
         int i=0;
         while(i< bullets.size()){
@@ -341,7 +341,7 @@ public class Lines extends SurfaceView implements View.OnTouchListener, SensorEv
 
             v.postInvalidate();
         }
-
+//If you're a programmer, you would know: // the real joke is always in the comments
         boolean movd=false;
         if(e.getAction()==MotionEvent.ACTION_DOWN){
             downPos[0]=e.getX();
@@ -407,7 +407,7 @@ public class Lines extends SurfaceView implements View.OnTouchListener, SensorEv
     }
     @Override
     public void onAccuracyChanged(Sensor sensor,int accuracy){ }
-
+//Why do Python programmers have low self esteem? They're constantly comparing their self to other.
     public void singleGradientBackground(int[] color){
         if(color.length>1) {
             gd = new GradientDrawable(
