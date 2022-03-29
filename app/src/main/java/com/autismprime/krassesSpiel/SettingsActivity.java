@@ -22,6 +22,7 @@ import androidx.preference.PreferenceManager;
 import java.net.URISyntaxException;
 import yuku.ambilwarna.AmbilWarnaDialog;
 
+//How do you know if a programmer is really busy? They’ve got a lot of issues.
 public class SettingsActivity extends AppCompatActivity {
 
     @Override
@@ -63,7 +64,7 @@ public class SettingsActivity extends AppCompatActivity {
                         launcher.launch(Intent.createChooser(intent, ""));
                     }
                 });
-
+        //What Does A Programmer Do When His Car Breaks? He exits and then goes back in.
         //check what music the user chose
         ActivityResultLauncher<Intent> launcher=registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
                 new ActivityResultCallback<ActivityResult>() {
@@ -104,7 +105,7 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
-
+//How did the computer hackers get away from the scene of the crime? I think they just ransomware.
             //OPEN COLOR PICKER LISTENER
             Preference.OnPreferenceClickListener click=new Preference.OnPreferenceClickListener() {
                 @Override
@@ -172,6 +173,7 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             });
 
+//Where do computer keyboards get a drink? The Space Bar
             //RESET SETTINGS TO DEFAULT
             final Preference def=findPreference("default");
             def.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
@@ -196,3 +198,5 @@ public class SettingsActivity extends AppCompatActivity {
         NavUtils.navigateUpFromSameTask(this);
     }
 }
+
+//My computer died after getting a virus. It was a terminal illness.
