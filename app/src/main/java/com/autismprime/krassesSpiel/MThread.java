@@ -17,7 +17,7 @@ public class MThread extends Thread {
         running=run;
     }
 
-
+//Why do Java programmers wear glasses? Because they don’t C#
     @Override
     public void run(){
         final MediaPlayer m=MediaPlayer.create(v.getContext(),R.raw.laser);
@@ -52,7 +52,7 @@ public class MThread extends Thread {
                 }
                 count=0;
             }
-
+//A journalist asked a programmer:- What makes code bad? No comment.
             if(!((v.blauPos>v.weit+120&&st>0)||(v.blauPos<-120&&st<0))){
                 v.blauPos+=st*deltaTime/10000000;
             }
