@@ -1,10 +1,8 @@
-package com.autismprime.krassesSpiel;
+package com.autismprime.krassesSpielDebug;
 
 
-import android.Manifest;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -13,11 +11,12 @@ import android.app.Activity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
-import androidx.core.app.ActivityCompat;
 import androidx.preference.PreferenceManager;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
 
 public class MainActivity extends Activity {
 Lines lins;int a=0;MediaPlayer mp;
@@ -75,30 +74,39 @@ Lines lins;int a=0;MediaPlayer mp;
                 break;
             case "-1": //play chosen music
                 a=1;
-                mp =  new MediaPlayer();
-                FileInputStream fis = null;
-                String uriString=null;
-                try {
-                    int permisson=ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
-                    if (permisson != PackageManager.PERMISSION_GRANTED && SettingsActivity.SettingsFragment.ur!=null) {
-                        mp = new MediaPlayer().create(this, SettingsActivity.SettingsFragment.ur);
-                    }
 
-                    else {
-                        String imageUriString = sp.getString("uri", "");
-                        Log.i("", imageUriString);
-                        uriString = imageUriString;
-                        File directory = new File(uriString);
+                FileInputStream fis = null;
+               // String uriString=null;
+
+                //int permisson=ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
+                if (SettingsActivity.SettingsFragment.ur!=null) {
+                    mp = new MediaPlayer().create(this, SettingsActivity.SettingsFragment.ur);
+                    TextView t=findViewById(R.id.textView2);
+                    t.setText("SAF");
+                }
+
+                if((SettingsActivity.SettingsFragment.ur==null||mp==null)) {
+                    mp =  new MediaPlayer();
+                    Log.wtf("","hier");
+                    String imageUriString = sp.getString("uri", "kein Musik Pfad gespeichert.");
+                    TextView t=findViewById(R.id.textView2);
+                    t.setText("Pfad: "+imageUriString);
+                    //uriString = imageUriString;
+
+                    try {
+                        File directory = new File(imageUriString);
                         fis = new FileInputStream(directory);
+                        Log.i("", imageUriString);
 
                         mp.setDataSource(fis.getFD());
                         mp.setAudioStreamType(AudioManager.STREAM_MUSIC);
                         mp.prepare();
+                    } catch (IOException e) {
+                        a=0;
+                        e.printStackTrace();
                     }
-                } catch (Exception e) {
-                    a=0;
-                    e.printStackTrace();
                 }
+
 
                 break;
         }

@@ -1,4 +1,4 @@
-package com.autismprime.krassesSpiel;
+package com.autismprime.krassesSpielDebug;
 
 import android.animation.ArgbEvaluator;
 import android.animation.ValueAnimator;

@@ -1,4 +1,4 @@
-package com.autismprime.krassesSpiel;
+package com.autismprime.krassesSpielDebug;
 
 import android.annotation.SuppressLint;
 import android.content.ContentUris;
