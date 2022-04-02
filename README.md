@@ -1,5 +1,5 @@
 # krassesSpiel
-_A little Game where you shoot bullets at squares_
+A little Game where you shoot bullets at squares
 
 [<img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" alt="Get it on F-Droid" height="80">][f-droid]
 
