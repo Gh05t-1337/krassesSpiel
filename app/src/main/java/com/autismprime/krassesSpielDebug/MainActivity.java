@@ -76,22 +76,15 @@ Lines lins;int a=0;MediaPlayer mp;
                 a=1;
 
                 FileInputStream fis = null;
-               // String uriString=null;
 
                 //int permisson=ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
                 if (SettingsActivity.SettingsFragment.ur!=null) {
                     mp = new MediaPlayer().create(this, SettingsActivity.SettingsFragment.ur);
-                    TextView t=findViewById(R.id.textView2);
-                    t.setText("SAF");
                 }
 
                 if((SettingsActivity.SettingsFragment.ur==null||mp==null)) {
                     mp =  new MediaPlayer();
-                    Log.wtf("","hier");
                     String imageUriString = sp.getString("uri", "kein Musik Pfad gespeichert.");
-                    TextView t=findViewById(R.id.textView2);
-                    t.setText("Pfad: "+imageUriString);
-                    //uriString = imageUriString;
 
                     try {
                         File directory = new File(imageUriString);
