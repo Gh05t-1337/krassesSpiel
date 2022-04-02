@@ -1,4 +1,4 @@
-package com.autismprime.krassesSpielDebug;
+package com.autismprime.krassesSpiel;
 
 import android.media.MediaPlayer;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package com.autismprime.krassesSpielDebug;
+package com.autismprime.krassesSpiel;
 
 import android.Manifest;
 import android.content.Intent;
