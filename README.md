@@ -31,4 +31,7 @@ lists are nice:
 
 ending of list
 
+# License
+Copyright (C) 2022 Gh05t-1337, Licensed under the Academic Free License version 1.1.
+
 [f-droid]: https://f-droid.org/de/packages/com.autismprime.krassesSpiel/
